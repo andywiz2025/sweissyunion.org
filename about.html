@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story | Sweissy Union United Kingdom</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #002147; /* Deep Navy */
+        --accent: #d4af37; /* Gold */
+        --white: #ffffff;
+        --light-bg: #f8fafd;
+        --text-main: #333333;
+        --text-muted: #555555;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.8;
+        color: var(--text-main);
+        background: var(--white);
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary);
+        text-transform: uppercase;
+      }
+
+      /* NAVIGATION */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        background: var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* LOGO UPDATED HERE */
+      .logo-box img {
+        height: 70px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+      .nav-links li {
+        margin-left: 25px;
+      }
+      .nav-links a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* PAGE HEADER */
+      .page-header {
+        background:
+          linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
+          url("https://images.unsplash.com/photo-1523050335456-adabbf72c766?q=80&w=2000");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 80px 10%;
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--white);
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      /* CONTENT SECTIONS */
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 20px;
+      }
+
+      .story-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      .story-text h2 {
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .story-text h2::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .legacy-card {
+        background: var(--light-bg);
+        padding: 40px;
+        border-radius: 15px;
+        border-left: 8px solid var(--accent);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      /* THE MOTTO BOX */
+      .motto-banner {
+        background: var(--primary);
+        color: var(--white);
+        padding: 50px;
+        text-align: center;
+        border-radius: 15px;
+        margin: 60px 0;
+      }
+      .motto-banner h2 {
+        color: var(--accent);
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        margin-top: 40px;
+      }
+      .timeline-item {
+        padding-left: 30px;
+        border-left: 3px solid var(--accent);
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .timeline-item::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: var(--primary);
+        border: 3px solid var(--accent);
+        border-radius: 50%;
+        position: absolute;
+        left: -12px;
+        top: 5px;
+      }
+      .year {
+        font-weight: bold;
+        color: var(--accent);
+        font-size: 1.2rem;
+      }
+
+      footer {
+        background: #0a0a0a;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 850px) {
+        .story-section {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          flex-direction: column;
+          padding: 20px;
+        }
+        .nav-links {
+          margin-top: 20px;
+        }
+        .page-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="sweissyunionlogo.png" alt="Sweissy Union UK Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" style="color: var(--accent)">Our Story</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="page-header">
+      <h1>Our Story & Heritage</h1>
+      <p>A journey from a Freetown guild to a global Diaspora network.</p>
+    </header>
+
+    <main class="container">
+      <section class="story-section">
+        <div class="story-text">
+          <h2>The Lightfoot Boston Legacy</h2>
+          <p>
+            The spirit of Sweissy Union United Kingdom was born in the mid-20th
+            century at a historic junction in Freetown:
+            <strong>Lightfoot Boston Street and Howe Street</strong>.
+          </p>
+          <p>
+            It was here that a community of young Sierra Leoneans gathered as
+            jewelry apprentices under the mentorship of
+            <strong>Pa Sweissy</strong>, a master goldsmith known for his skill
+            and leadership.
+          </p>
+          <p>
+            Recognizing the economic pressures of the time, this collective
+            evolved into a dedicated Union—built on the principles of mutual
+            aid, craftsmanship, and community welfare.
+          </p>
+        </div>
+        <div class="legacy-card">
+          <i
+            class="fas fa-gem"
+            style="font-size: 2rem; color: var(--accent); margin-bottom: 20px"
+          ></i>
+          <h3>Our Roots</h3>
+          <p>
+            <em
+              >"Our foundation was built on the discipline of artisanal training
+              and the unshakable belief that the success of one depends on the
+              strength of the union."</em
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="motto-banner">
+        <h2>"Creating Hope for People in Need"</h2>
+        <p>
+          Our motto represents the evolution of our mission. Today, we bridge
+          the gap between the Sierra Leonean Diaspora in the United Kingdom and
+          the urgent social needs of our homeland.
+        </p>
+      </section>
+
+      <h2>Our Evolution</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">Historical Roots</div>
+          <p>
+            Formation of the union at Lightfoot Boston Street, Freetown. A group
+            of apprentices coming together to support one another's welfare and
+            craftsmanship.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2008</div>
+          <p>
+            Formal registration as a
+            <strong>UK Registered Charity (No. 1125890)</strong>. The mission
+            expands to healthcare, education, and poverty alleviation.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2026 & Beyond</div>
+          <p>
+            Renamed to <strong>Sweissy Union United Kingdom</strong>. We are now
+            a global force for good, leveraging the expertise of the Diaspora to
+            transform lives in Sierra Leone.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><strong>Sweissy Union United Kingdom</strong></p>
+      <p style="font-size: 0.8rem; color: #888">
+        Registered Charity Number: 1125890
+      </p>
+    </footer>
+  </body>
+</html>

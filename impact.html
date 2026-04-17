@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Impact | Sweissy Union United Kingdom</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #002147;
+        --accent: #d4af37;
+        --white: #ffffff;
+        --light-bg: #f4f7f9;
+        --text-main: #333333;
+        --success: #28a745;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        color: var(--text-main);
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+      }
+
+      /* NAVIGATION */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        background: var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo-box img {
+        height: 70px;
+        width: auto;
+      }
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+      .nav-links li {
+        margin-left: 25px;
+      }
+      .nav-links a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* HEADER */
+      .impact-header {
+        background:
+          linear-gradient(rgba(0, 33, 71, 0.8), rgba(0, 33, 71, 0.8)),
+          url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 80px 10%;
+        text-align: center;
+      }
+
+      /* IMPACT STATS BAR */
+      .stats-bar {
+        background: var(--accent);
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 10%;
+        color: var(--primary);
+        flex-wrap: wrap;
+      }
+      .stat-card {
+        text-align: center;
+        padding: 10px;
+      }
+      .stat-card h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+      }
+      .stat-card p {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      /* PROJECT CARDS */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 20px;
+      }
+      .project-section {
+        margin-bottom: 80px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .project-content h2 {
+        color: var(--primary);
+        margin-bottom: 20px;
+        border-left: 5px solid var(--accent);
+        padding-left: 15px;
+      }
+      .project-content ul {
+        list-style: none;
+        margin-top: 20px;
+      }
+      .project-content ul li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .project-content ul li i {
+        color: var(--success);
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+
+      .project-image {
+        background: #eee;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        height: 350px;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* REVERSED GRID FOR ALTERNATING EFFECT */
+      .reverse {
+        direction: rtl;
+      }
+      .reverse .project-content {
+        direction: ltr;
+      }
+
+      footer {
+        background: #0a0a0a;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+      }
+
+      @media (max-width: 850px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+        .reverse {
+          direction: ltr;
+        }
+        nav {
+          flex-direction: column;
+          padding: 20px;
+        }
+        .nav-links {
+          margin-top: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="sweissyunionlogo.png" alt="Sweissy Union UK" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="impact.html" style="color: var(--accent)">Impact</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="impact-header">
+      <h1>Transforming Lives</h1>
+      <p>
+        Creating hope through tangible, sustainable projects in Sierra Leone and
+        the UK.
+      </p>
+    </header>
+
+    <section class="stats-bar">
+      <div class="stat-card">
+        <h2>40+</h2>
+        <p>Years of Legacy</p>
+      </div>
+      <div class="stat-card">
+        <h2>1125890</h2>
+        <p>Charity Number</p>
+      </div>
+      <div class="stat-card">
+        <h2>100%</h2>
+        <p>Transparency</p>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="project-section">
+        <div class="project-grid">
+          <div class="project-content">
+            <h2>Healthcare & Maternal Health</h2>
+            <p>
+              Reducing mortality rates in Sierra Leone is at the core of our
+              mission. We believe every mother and child deserves a fighting
+              chance.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Provision of medical
+                supplies and equipment to local clinics.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Support for nursing and
+                midwifery staff training.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Emergency health funding for
+                vulnerable families.
+              </li>
+            </ul>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620?q=80&w=800"
+              alt="Healthcare Project"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="project-grid reverse">
+          <div class="project-content">
+            <h2>The Educational Legacy</h2>
+            <p>
+              Following in the footsteps of Pa Sweissy, we prioritize the
+              training of the next generation. We don't just give fish; we teach
+              how to fish.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Scholarship programs for
+                gifted but underprivileged students.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Restoration of learning
+                environments and school resource centers.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Providing laptops and
+                digital tools for IPAM and university students.
+              </li>
+            </ul>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800"
+              alt="Education Project"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="project-grid">
+          <div class="project-content">
+            <h2>UK Diaspora Community</h2>
+            <p>
+              As **Sweissy Union United Kingdom**, we look after our own. We act
+              as a support network for Sierra Leoneans living in the UK.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Welfare support for members
+                during times of hardship or bereavement.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Cultural integration
+                programs for new Diaspora arrivals.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Annual gatherings to
+                maintain the "Lightfoot Boston" heritage.
+              </li>
+            </ul>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800"
+              alt="Community Support"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>Sweissy Union United Kingdom</strong></p>
+      <p style="font-size: 0.8rem; color: #888">
+        Registered Charity Number: 1125890
+      </p>
+    </footer>
+  </body>
+</html>
