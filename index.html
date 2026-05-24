@@ -1,186 +1,283 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Sweissy Union United Kingdom</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <!-- Professional Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-      :root {
-        --primary: #002147;
-        --accent: #d4af37;
-        --white: #ffffff;
-        --light-bg: #f4f7f9;
-        --text-main: #333333;
-      }
+        :root {
+            --primary: #002147;    /* Deep Navy: Institutional Trust */
+            --accent: #D4AF37;     /* Gold: Goldsmith Heritage */
+            --white: #ffffff;
+            --light-bg: #f5f8fa;
+            --text-main: #2b2b2b;
+            --text-muted: #555555;
+        }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Open Sans", sans-serif;
-        line-height: 1.6;
-        color: var(--text-main);
-      }
+        /* RESET & BASE STYLES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Open Sans', sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-main); 
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
 
-      /* NAVIGATION */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 5%;
-        background: var(--primary);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      /* --- LOGO STYLING --- */
-      .logo-box img {
-        height: 60px; /* Adjust this to make your logo bigger or smaller */
-        width: auto;
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-      }
-      .nav-links li {
-        margin-left: 20px;
-      }
-      .nav-links a {
-        color: var(--white);
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-
-      /* HERO */
-      .hero {
-        height: 70vh;
-        background:
-          linear-gradient(rgba(0, 33, 71, 0.7), rgba(0, 33, 71, 0.7)),
-          url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000"); /* BG IMAGE */
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: var(--white);
-        padding: 0 20px;
-      }
-
-      .btn {
-        padding: 15px 35px;
-        text-decoration: none;
-        font-weight: 700;
-        border-radius: 50px;
-        background: var(--accent);
-        color: var(--primary);
-      }
-
-      /* SECTIONS */
-      .section {
-        padding: 60px 10%;
-        text-align: center;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .card {
-        padding: 30px;
-        background: var(--white);
-        border-radius: 10px;
-        border: 1px solid #eee;
-      }
-      .card i {
-        font-size: 2rem;
-        color: var(--accent);
-        margin-bottom: 15px;
-      }
-
-      @media (max-width: 768px) {
+        /* NAVIGATION BAR */
         nav {
-          flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        .nav-links {
-          margin-top: 15px;
+        .logo-box img {
+            height: 70px;
+            width: auto;
+            display: block;
         }
-        .hero h1 {
-          font-size: 2rem;
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { 
+            color: var(--white); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            font-weight: 600; 
+            text-transform: uppercase;
+            transition: 0.3s;
         }
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo-box">
-        <a href="index.html">
-          <img src="sweissyunionlogo.png" alt="Sweissy Union UK Logo" />
-        </a>
-      </div>
+        .nav-links a:hover { color: var(--accent); }
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Our Story</a></li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        /* HERO SECTION */
+        .hero {
+            height: 65vh;
+            min-height: 450px;
+            background: linear-gradient(rgba(0, 33, 71, 0.8), rgba(0, 33, 71, 0.8)), 
+                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000'); /* Placeholder background */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+        .charity-badge {
+            background: rgba(214, 175, 55, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; color: #f0f0f0; margin-bottom: 30px; }
+
+        /* BUTTONS */
+        .btn { 
+            padding: 14px 35px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            border-radius: 50px; 
+            transition: 0.3s ease; 
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .btn-gold { background: var(--accent); color: var(--primary); }
+        .btn-gold:hover { background: var(--white); transform: translateY(-2px); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); }
+
+        /* SECTIONS */
+        .section { padding: 80px 10%; }
+        .bg-light { background-color: var(--light-bg); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-header h2 { color: var(--primary); margin-bottom: 15px; position: relative; padding-bottom: 15px; }
+        .section-header h2::after {
+            content: ''; width: 50px; height: 3px; background: var(--accent);
+            position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+        }
+
+        /* WHO WE ARE / MISSION */
+        .mission-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            text-align: center;
+            border-top: 4px solid var(--accent);
+        }
+        .mission-box p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+        .mission-statement { font-style: italic; font-weight: 600; color: var(--primary); font-size: 1.2rem !important; }
+
+        /* DUAL IMPACT DYNAMIC SPLIT */
+        .impact-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .impact-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .impact-img-wrapper {
+            height: 250px;
+            background: #e2e8f0;
+            position: relative;
+        }
+        .impact-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .region-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .impact-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .impact-body h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
+        .impact-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        
+        /* FOOTER */
+        footer { background: #0a0a0a; color: #ffffff; padding: 50px 5% 30px; text-align: center; }
+        .footer-bottom { margin-top: 30px; padding-top: 20px; border-top: 1px solid #222; font-size: 0.8rem; color: #777; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 850px) {
+            nav { flex-direction: column; padding: 15px; }
+            .nav-links { margin-top: 15px; width: 100%; justify-content: center; flex-wrap: wrap; }
+            .nav-links li { margin: 5px 10px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .section { padding: 50px 5%; }
+            .impact-split { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo-box">
+            <a href="index.html">
+                <!-- MAINTAINING REGISTERED LOGO FILE -->
+                <img src="sweissyunionlogo.png" alt="Sweissy Union United Kingdom Logo"> 
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
+    <!-- Hero Framework -->
     <header class="hero">
-      <h1>Creating Hope for People in Need</h1>
-      <p>
-        Uniting the Sierra Leonean Diaspora in the UK to build a better future.
-      </p>
-      <br />
-      <a href="impact.html" class="btn">Learn More</a>
+        <div class="charity-badge"><i class="fas fa-heart"></i> Registered Charity</div>
+        <h1>Creating Hope for People in Need</h1>
+        <p>An international charity network tackling the root causes of poverty from the UK to Sierra Leone.</p>
+        <a href="#what-we-do" class="btn btn-gold">View Our Projects</a>
     </header>
 
+    <!-- Who We Are / Core Mission -->
     <section class="section">
-      <h2>Our Strategic Vision</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fas fa-eye"></i>
-          <h3>Vision</h3>
-          <p>
-            To be the leading catalyst for sustainable change in Sierra Leone.
-          </p>
+        <div class="section-header">
+            <h2>Who We Are</h2>
+            <p>Our Mission & Strategic Commitment</p>
         </div>
-        <div class="card">
-          <i class="fas fa-bullseye"></i>
-          <h3>Mission</h3>
-          <p>
-            Mobilizing UK resources to deliver healthcare and education
-            scholarships.
-          </p>
+        
+        <div class="mission-box">
+            <p>We are a charity organization committed to building a fairer future. By focusing on **Education** and social integration, we tackle the root causes of poverty in both the UK and Sierra Leone. Our mission is to unite communities and empower individuals with the tools they need to thrive.</p>
+            <p class="mission-statement">
+                "Supporting **Education**, building **Community Cohesion**, and driving **Poverty Alleviation**."
+            </p>
         </div>
-      </div>
     </section>
 
-    <footer
-      style="background: #111; color: #fff; padding: 40px; text-align: center"
-    >
-      <p>Sweissy Union United Kingdom</p>
-      <p style="font-size: 0.8rem; color: #888">
-        Registered Charity No. 1125890
-      </p>
+    <!-- What We Do / Dual Impact Section -->
+    <section id="what-we-do" class="section bg-light">
+        <div class="section-header">
+            <h2>What We Do</h2>
+            <p>We empower communities and transform lives across borders.</p>
+        </div>
+
+        <!-- Visual Dual-Impact Presentation Layout -->
+        <div class="impact-split">
+            
+            <!-- Sierra Leone Impact Card -->
+            <div class="impact-card">
+                <div class="impact-img-wrapper">
+                    <span class="region-tag">Sierra Leone</span>
+                    <!-- EDIT THIS IMG SRC WITH YOUR SL PROJECT PHOTO -->
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800" alt="Education Project in Sierra Leone">
+                </div>
+                <div class="impact-body">
+                    <h3>Advancing Education & Agriculture</h3>
+                    <p>We provide dedicated support to foster school systems, repair and improve school facilities to create safe, inspiring learning environments, and bring people together to build strong, united communities. We also strengthen communities with small agricultural projects designed to address food insecurity and combat long-term poverty.</p>
+                </div>
+            </div>
+
+            <!-- United Kingdom Impact Card -->
+            <div class="impact-card">
+                <div class="impact-img-wrapper">
+                    <span class="region-tag">United Kingdom</span>
+                    <!-- EDIT THIS IMG SRC WITH YOUR UK PROJECT PHOTO -->
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800" alt="Community Support in London">
+                </div>
+                <div class="impact-body">
+                    <h3>Community Cohesion & Rights Advocacy</h3>
+                    <p>Operating primarily across London, we focus heavily on building deep **Community Cohesion**. We guide and support individuals to understand and access their legal rights. Our team actively signposts community members to essential benefits, specialized training, healthcare pathways, and fair immigration resources to reduce modern inequality.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Required Consultant CTA Action Anchor -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="impact.html" class="btn btn-outline">Learn more about our impact</a>
+        </div>
+    </section>
+
+    <!-- Footer Identity Framework -->
+    <footer>
+        <p><strong>Sweissy Union United Kingdom</strong></p>
+        <p style="font-size: 0.85rem; color: #aaa; margin-top: 5px;">Registered Charity in England & Wales | No. 1125890</p>
+        <div class="footer-bottom">
+            &copy; 2026 Sweissy Union UK. All Rights Reserved. Managed to maximize community potential globally.
+        </div>
     </footer>
-  </body>
+
+</body>
 </html>
